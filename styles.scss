@@ -1,3 +1,5 @@
+$mobileWidth: 480px;
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -8,61 +10,113 @@
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+	.container {
+		width: 80vw;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1600px) {
+	.container {
+		width: 100vw;
+	}
+}
+
+@media screen and (max-width: $mobileWidth) {
+	.container {
+		width: 100%;
+	}
+}
+
 // _________________________________________________HEADER_________________________________________________________
+
 
 #header {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 20vh;
+}
 
-	.bannerTop {
+@media screen and (max-width: $mobileWidth) {
+	#header {
+		height: 150px;
+	}
+}
+
+.bannerTop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 75%;
+	background: #601315;
+
+	.logo {
+		object-fit: contain;
+		height: 40%;
+		margin-left: 2%;
+	}
+}
+
+@media screen and (max-width: $mobileWidth) {
+	.bannerTop .logo {
+		height: 70%;
+		margin-left: 5%;
+	}
+}
+
+.bannerFSWD01 {
+	display: flex;
+	height: 70%;
+	width: 60%;
+	margin-right: 2%;
+	background-image: url("img/banner-1.png");
+	background-size: cover;
+}
+
+@media screen and (max-width: $mobileWidth) {
+	.bannerFSWD01 {
+		display: none;
+	}
+}
+
+#nav {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	background: black;
+
+	ul {
 		display: flex;
+		width: 30%;
 		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		height: 75%;
-		background: #601315;
+	}
 
-		.logo {
-			object-fit: contain;
-			height: 40%;
-			margin-left: 2%;
-		}
-
-		.bannerFSWD01 {
-			display: flex;
-			height: 70%;
-			width: 60%;
-			margin-right: 2%;
-			background-image: url("img/banner-1.png");
-			background-size: cover;
+	@media screen and (max-width: $mobileWidth) {
+		ul {
+			width: 100%;
+			justify-content: space-around;
+			padding: 0 50px;
 		}
 	}
 
-	#nav {
+	li {
 		display: flex;
-		width: 100%;
-		justify-content: flex-start;
-		align-items: center;
-		background: black;
+		list-style: none;
+		font-size: 2em;
+	}
 
-		ul {
-			display: flex;
-			width: 30%;
-			justify-content: space-between;
-		}
-
+	@media screen and (max-width: $mobileWidth) {
 		li {
-			display: flex;
-			list-style: none;
-			font-size: 2em;
+			font-size: 1.5em;
 		}
+	}
 
-		a {
-			color: white;
-			text-decoration: none;
-		}
+	a {
+		color: white;
+		text-decoration: none;
 	}
 }
 
@@ -77,45 +131,73 @@
 
 // -------------------------------background-images
 
-	#nasa {
-		background-image: url("img/nasa.png");
-	}
+#nasa {
+	background-image: url("img/nasa.png");
+}
 
-	#eu {
-		background-image: url("img/eu.png");
-	}
+#eu {
+	background-image: url("img/eu.png");
+}
 
-	#jeff {
-		background-image: url("img/jeff.png");
-	}
+#jeff {
+	background-image: url("img/jeff.png");
+}
 
-	#polar {
-		background-image: url("img/polar.png");
-	}
+#bannerMobile {
+	background-image: url("img/banner-mobile-fswd.png");
+	display: none;
+}
 
-	#musk {
-		background-image: url("img/musk.jpg");
+@media screen and (max-width: $mobileWidth) {
+	#bannerMobile {
+		display: flex;
 	}
+}
 
-	#snowden {
-		background-image: url("img/snowden.jpg");
-	}
+#polar {
+	background-image: url("img/polar.png");
+}
 
-	#iphone {
-		background-image: url("img/iphone.png");
-	}
+#musk {
+	background-image: url("img/musk.jpg");
+}
 
-	#smart {
-		background-image: url("img/smart.png");
-	}
+#snowden {
+	background-image: url("img/snowden.jpg");
+}
 
-	#one {
-		background-image: url("img/one.png");
-	}
+#iphoneTop {
+	background-image: url("img/iphone.png");
+	display: none;
+}
 
-	#phone {
-		background-image: url("img/phone.png");
+@media screen and (max-width: $mobileWidth) {
+	#iphoneTop {
+		display: flex;
 	}
+}
+
+#iphoneBottom {
+	background-image: url("img/iphone.png");
+}
+
+@media screen and (max-width: $mobileWidth) {
+	#iphoneBottom {
+		display: none;
+	}
+}
+
+#smart {
+	background-image: url("img/smart.png");
+}
+
+#one {
+	background-image: url("img/one.png");
+}
+
+#phone {
+	background-image: url("img/phone.png");
+}
 
 // --------------------------------------------------SECTION 1-----------------------------------------------------------
 
@@ -127,17 +209,29 @@
 	margin: 0.5% 0 0 0;
 }
 
+@media screen and (max-width: $mobileWidth) {
+	#date {
+		display: none;
+	}
+}
+
 #topNewsHeader {
 	display: flex;
 	width: 100%;
 	justify-content: flex-start;
 	box-sizing: border-box;
 	align-items: center;
-	font-size: 2.2em;
+	font-size: 2em;
 	line-height: 1.5em;
 	margin: 0.5% 0 2% 0;
 	padding-left: 10px;
 	background: #DEDEDE;
+}
+
+@media screen and (max-width: $mobileWidth) {
+	#topNewsHeader {
+		margin: 10px 0 2% 0;
+	}
 }
 
 // --------------------------------------------------SECTION 2-----------------------------------------------------------
@@ -156,58 +250,97 @@
 	width: 86%;
 }
 
-	// -------------------------------imageBoxTop
+@media screen and (max-width: $mobileWidth) {
+	#contentTop {
+		width: 100%;
+	}
+}
 
+// -------------------------------imageBoxTop
+
+.imageBoxTop {
+	display: flex;
+	align-items: flex-end;
+	width: 32%;
+	height: 270px;
+	background-size: cover;	
+	background-color: gray;
+	text-decoration: none;
+}
+
+@media screen and (max-width: $mobileWidth) {
 	.imageBoxTop {
-		display: flex;
-		align-items: flex-end;
-		width: 32%;
-		height: 270px;
-		background-size: cover;	
-		background-color: gray;
-		text-decoration: none;
-
-		.imageBoxTopText {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			height: 30%;
-			width: 100%;
-			margin: 0;
-			padding: 0 10px;
-			background: black;
-			color: white;
-			font-size: 1.3em;
-		}
+		width: 48%;
+		height: 150px;
 	}
+}
 
-	// -------------------------------
+.imageBoxTopText {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 30%;
+	width: 100%;
+	margin: 0;
+	padding: 0 10px;
+	background: black;
+	color: white;
+	font-size: 1.3em;
+}
 
+@media screen and (max-width: $mobileWidth) {
+	.imageBoxTopText {
+		font-size: 0.7em;
+	}
+}
+
+// -------------------------------
+
+#topNewsContent {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: $mobileWidth) {
 	#topNewsContent {
-		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		height: 340px;
 	}
+}
 
-	// -------------------------------
+// -------------------------------
 
+#popularHeader {
+	display: flex;
+	justify-content: flex-start;
+	box-sizing: border-box;
+	align-items: center;
+	font-size: 2em;
+	line-height: 1.5em;
+	margin: 2% 0;
+	padding-left: 10px;
+	background: #DEDEDE;
+}
+
+@media screen and (max-width: $mobileWidth) {
 	#popularHeader {
-		display: flex;
-		justify-content: flex-start;
-		box-sizing: border-box;
-		align-items: center;
-		font-size: 2.2em;
-		line-height: 1.5em;
-		margin: 2% 0;
-		padding-left: 10px;
-		background: #DEDEDE;
+		margin: 0 0 2% 0
 	}
+}
 
-	// -------------------------------
+// -------------------------------
 
+#popularContentTop {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: $mobileWidth) {
 	#popularContentTop {
-		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		height: 340px;
 	}
+}
 
 // -----------------------------------------------------------
 
@@ -216,6 +349,12 @@
 	width: 12%;
 	background-image: url("img/banner-2.png");
 	background-size: cover;
+}
+
+@media screen and (max-width: $mobileWidth) {
+	#bannerFSWD02 {
+		display: none;
+	}
 }
 
 // --------------------------------------------------SECTION 3-----------------------------------------------------------
@@ -227,6 +366,12 @@
 	margin: 2% 0;
 	background-image: url("img/banner-3.png");
 	background-size: cover;
+}
+
+@media screen and (max-width: $mobileWidth) {
+	#bannerDeveloper {
+		display: none;
+	}
 }
 
 // --------------------------------------------------SECTION 4-----------------------------------------------------------
@@ -247,37 +392,60 @@
 	height: 64vh;
 }
 
-	// -------------------------------imageBoxBottom
+@media screen and (max-width: $mobileWidth) {
+	#contentBottom {
+		width: 100%;
+		height: 320px;
+	}
+}
 
+// -------------------------------imageBoxBottom
+
+.imageBoxBottom {
+	display: flex;
+	align-items: flex-end;
+	width: 48%;
+	height: 400px;
+	background-size: cover;	
+	background-color: gray;
+	text-decoration: none;
+}
+
+@media screen and (max-width: $mobileWidth) {
 	.imageBoxBottom {
-		display: flex;
-		align-items: flex-end;
 		width: 48%;
-		height: 400px;
-		background-size: cover;	
-		background-color: gray;
-		text-decoration: none;
-
-		.imageBoxBottomText {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			height: 30%;
-			width: 100%;
-			margin: 0;
-			padding: 0 10px;
-			background: black;
-			color: white;
-			font-size: 1.8em;
-		}
+		height: 150px;
 	}
+}
 
-	// -------------------------------
+.imageBoxBottomText {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 30%;
+	width: 100%;
+	margin: 0;
+	padding: 0 10px;
+	background: black;
+	color: white;
+	font-size: 1.8em;
+}
 
-	#popularContentBottom {
-		display: flex;
-		justify-content: space-between;
+@media screen and (max-width: $mobileWidth) {
+	.imageBoxBottomText {
+		font-size: 0.7em;
 	}
+}
+
+// -------------------------------
+
+#popularContentBottom {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	align-content: space-between;
+	flex-wrap: wrap;
+}
 
 // -----------------------------------------------------------
 
@@ -286,6 +454,12 @@
 	width: 12%;
 	background-image: url("img/banner-4.png");
 	background-size: cover;
+}
+
+@media screen and (max-width: $mobileWidth) {
+	#bannerCF {
+		display: none;
+	}
 }
 
 // _________________________________________________FOOTER_________________________________________________________
@@ -298,48 +472,81 @@
 	margin-top: 5%;
 	background: black;
 	color: white;
+}
 
+.bannerBottom {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	height: 75%;
+
+	.logo {
+		object-fit: contain;
+		height: 50%;
+		margin-right: 4%;
+	}
+}
+
+@media screen and (max-width: $mobileWidth) {
 	.bannerBottom {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		width: 100%;
-		height: 75%;
+		justify-content: center;
 
 		.logo {
-			object-fit: contain;
-			height: 50%;
-			margin-right: 2%;
+			height: 70%;
+			margin: 0;
 		}
 	}
+}
 
-	#navBottom {
+#navBottom {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+
+	ul {
 		display: flex;
-		width: 100%;
-		justify-content: flex-start;
-		align-items: center;
+		width: 20%;
+		justify-content: space-between;
+	}
 
+
+	@media screen and (max-width: $mobileWidth) {
 		ul {
-			display: flex;
-			width: 20%;
-			justify-content: space-between;
-		}
-
-		li {
-			display: flex;
-			list-style: none;
-			font-size: 1.5em;
-		}
-
-		a {
-			color: white;
-			text-decoration: none;
+			width: 100%;
+			justify-content: space-around;
+			padding: 0 80px;
 		}
 	}
 
-	#copyright {
+	li {
 		display: flex;
-		justify-content: center;
-		font-size: 1.1em;
+		list-style: none;
+		font-size: 1.5em;
+	}
+
+	@media screen and (max-width: $mobileWidth) {
+		li {
+			font-size: 1.2em;
+		}
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+#copyright {
+	display: flex;
+	justify-content: center;
+	font-size: 1.1em;
+}
+
+
+@media screen and (max-width: $mobileWidth) {
+	#copyright {
+		font-size: 0.9em;
 	}
 }
