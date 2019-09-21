@@ -54,36 +54,6 @@
   align-items: center;
   width: 96%; }
 
-#nasa {
-  background-image: url("img/nasa.png"); }
-
-#eu {
-  background-image: url("img/eu.png"); }
-
-#jeff {
-  background-image: url("img/jeff.png"); }
-
-#polar {
-  background-image: url("img/polar.png"); }
-
-#musk {
-  background-image: url("img/musk.jpg"); }
-
-#snowden {
-  background-image: url("img/snowden.jpg"); }
-
-#iphone {
-  background-image: url("img/iphone.png"); }
-
-#smart {
-  background-image: url("img/smart.png"); }
-
-#one {
-  background-image: url("img/one.png"); }
-
-#phone {
-  background-image: url("img/phone.png"); }
-
 #date {
   display: flex;
   width: 100%;
@@ -103,110 +73,32 @@
   padding-left: 10px;
   background: #DEDEDE; }
 
-#section_2 {
-  display: flex;
-  width: 100%;
-  justify-content: space-between; }
+h1 {
+  font-size: 2.2em; }
 
-#contentTop {
+#wrapper01 {
   display: flex;
   flex-direction: column;
-  width: 86%; }
+  margin-top: 20px;
+  font-size: 1.2em; }
 
-.imageBoxTop {
+#wrapper02 {
   display: flex;
-  align-items: flex-end;
-  width: 32%;
-  height: 270px;
-  background-size: cover;
-  background-color: gray;
-  text-decoration: none; }
-  .imageBoxTop .imageBoxTopText {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 30%;
-    width: 100%;
-    margin: 0;
-    padding: 0 10px;
-    background: black;
-    color: white;
-    font-size: 1.3em; }
-
-#topNewsContent {
-  display: flex;
-  justify-content: space-between; }
-
-#popularHeader {
-  display: flex;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  align-items: center;
-  font-size: 2.2em;
-  line-height: 1.5em;
-  margin: 2% 0;
-  padding-left: 10px;
-  background: #DEDEDE; }
-
-#popularContentTop {
-  display: flex;
-  justify-content: space-between; }
-
-#bannerFSWD02 {
-  display: flex;
-  width: 12%;
-  background-image: url("img/banner-2.png");
-  background-size: cover; }
-
-#bannerDeveloper {
-  display: flex;
-  width: 92%;
-  height: 12vh;
-  margin: 2% 0;
-  background-image: url("img/banner-3.png");
-  background-size: cover; }
-
-#section_4 {
-  display: flex;
-  width: 100%;
-  justify-content: space-between; }
-
-#contentBottom {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  width: 86%;
-  height: 64vh; }
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold; }
 
-.imageBoxBottom {
-  display: flex;
-  align-items: flex-end;
+#image {
   width: 48%;
-  height: 400px;
-  background-size: cover;
-  background-color: gray;
-  text-decoration: none; }
-  .imageBoxBottom .imageBoxBottomText {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 30%;
-    width: 100%;
-    margin: 0;
-    padding: 0 10px;
-    background: black;
-    color: white;
-    font-size: 1.8em; }
-
-#popularContentBottom {
-  display: flex;
-  justify-content: space-between; }
-
-#bannerCF {
-  display: flex;
-  width: 12%;
-  background-image: url("img/banner-4.png");
+  background-image: url("img/nasa.png");
   background-size: cover; }
+
+#summary {
+  width: 50%; }
+
+p {
+  margin-top: 40px; }
 
 #footer {
   display: flex;
@@ -247,4 +139,4 @@
     justify-content: center;
     font-size: 1.1em; }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=article.css.map */
